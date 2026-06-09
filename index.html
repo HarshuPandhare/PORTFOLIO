@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harshvardhan Pandhare - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- VS Code Title Bar -->
+  <div class="titlebar">
+    <div class="titlebar-left">
+      <div class="traffic-lights">
+        <span class="tl red"></span>
+        <span class="tl yellow"></span>
+        <span class="tl green"></span>
+      </div>
+    </div>
+    <div class="titlebar-center">Harshvardhan Pandhare - Portfolio</div>
+    <div class="titlebar-right"></div>
+  </div>
+
+  <!-- Menu Bar -->
+  <div class="menubar">
+    <span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Run</span><span>Terminal</span><span>Help</span>
+  </div>
+
+  <!-- Main Layout -->
+  <div class="vscode-layout">
+
+    <!-- Activity Bar -->
+    <div class="activity-bar">
+      <div class="activity-icon active" title="Explorer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/></svg>
+      </div>
+      <div class="activity-icon" title="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </div>
+      <div class="activity-icon" title="Source Control">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 009 9"/></svg>
+      </div>
+      <div class="activity-icon" title="Extensions">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      </div>
+      <div class="activity-spacer"></div>
+      <div class="activity-icon" title="Settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-title">EXPLORER</div>
+      <div class="sidebar-section">
+        <div class="folder-title">
+          <span class="chevron">▾</span> PORTFOLIO
+        </div>
+        <div class="file-tree">
+          <div class="file-item active" data-tab="home" onclick="switchTab('home')">
+            <span class="file-icon jsx">⚛</span> Home.jsx
+          </div>
+          <div class="file-item" data-tab="experience" onclick="switchTab('experience')">
+            <span class="file-icon json">{ }</span> Education.json
+          </div>
+          <div class="file-item" data-tab="projects" onclick="switchTab('projects')">
+            <span class="file-icon py">🐍</span> Projects.py
+          </div>
+          <div class="file-item" data-tab="contact" onclick="switchTab('contact')">
+            <span class="file-icon yml">⚙</span> Contact.yml
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Editor Area -->
+    <div class="editor-area">
+
+      <!-- Tab Bar -->
+      <div class="tab-bar">
+        <div class="tab active" id="tab-home" onclick="switchTab('home')">
+          <span class="tab-icon jsx">⚛</span> Home.jsx
+          <span class="tab-close">×</span>
+        </div>
+        <div class="tab" id="tab-experience" onclick="switchTab('experience')">
+          <span class="tab-icon json">{ }</span> Education.json
+          <span class="tab-close">×</span>
+        </div>
+        <div class="tab" id="tab-projects" onclick="switchTab('projects')">
+          <span class="tab-icon py">🐍</span> Projects.py
+          <span class="tab-close">×</span>
+        </div>
+        <div class="tab" id="tab-contact" onclick="switchTab('contact')">
+          <span class="tab-icon yml">⚙</span> Contact.yml
+          <span class="tab-close">×</span>
+        </div>
+      </div>
+
+      <!-- Editor Content -->
+      <div class="editor-content">
+
+        <!-- HOME PAGE -->
+        <div class="page active" id="page-home">
+          <div class="watermark">AI/ML</div>
+          <div class="hero">
+            <div class="hero-text">
+              <h1 class="name-title">Harshvardhan Pandhare</h1>
+              <p class="role-line"><span class="cursor-text">AI/ML Developer & Software Engineer</span><span class="cursor-blink">|</span></p>
+
+              <div class="skills-section">
+                <p class="skills-label">Skill Set</p>
+                <div class="skills-grid">
+                  <span class="skill-tag green">C / C++</span>
+                  <span class="skill-tag red">Java</span>
+                  <span class="skill-tag yellow">Python</span>
+                  <span class="skill-tag blue">Machine Learning</span>
+                  <span class="skill-tag pink">NumPy</span>
+                  <span class="skill-tag cyan">Pandas</span>
+                  <span class="skill-tag orange">Scikit-learn</span>
+                  <span class="skill-tag purple">Android Dev</span>
+                  <span class="skill-tag green">OpenCV</span>
+                  <span class="skill-tag red">YOLOv8</span>
+                  <span class="skill-tag yellow">TensorFlow</span>
+                  <span class="skill-tag blue">Computer Vision</span>
+                  <span class="skill-tag pink">Agentic AI</span>
+                  <span class="skill-tag cyan">Game Dev</span>
+                  <span class="skill-tag orange">Git</span>
+                </div>
+              </div>
+
+              <button class="contact-btn" onclick="switchTab('contact')">Contact</button>
+            </div>
+            <div class="hero-image">
+              <div class="profile-ring">
+                <div class="profile-placeholder">
+                  <span>HP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDUCATION PAGE -->
+        <div class="page" id="page-experience">
+          <div class="watermark">EDU</div>
+          <div class="page-content">
+            <h2 class="page-title"><span class="comment">{ </span>Education &amp; Qualifications<span class="comment"> }</span></h2>
+
+            <!-- Degree Card -->
+            <div class="edu-card featured">
+              <div class="edu-badge">🎓</div>
+              <div class="edu-body">
+                <div class="edu-header">
+                  <span class="edu-degree">B.Tech — Artificial Intelligence &amp; Machine Learning</span>
+                  <span class="edu-year">2024 – 2028</span>
+                </div>
+                <p class="edu-institute">Vishwakarma Institute of Technology (VIT), Pune</p>
+                <p class="edu-sub">Affiliated to Savitribai Phule Pune University</p>
+                <div class="edu-tags">
+                  <span class="etag">AI / ML</span>
+                  <span class="etag">Deep Learning</span>
+                  <span class="etag">Data Science</span>
+                  <span class="etag">Computer Vision</span>
+                  <span class="etag">NLP</span>
+                  <span class="etag">Robotics</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Coursework -->
+            <div class="edu-section-title"><span class="comment">// </span>Key Coursework</div>
+            <div class="coursework-grid">
+              <div class="course-item">
+                <span class="course-dot blue"></span>
+                <span>Data Structures &amp; Algorithms</span>
+              </div>
+              <div class="course-item">
+                <span class="course-dot green"></span>
+                <span>Machine Learning Fundamentals</span>
+              </div>
+              <div class="course-item">
+                <span class="course-dot yellow"></span>
+                <span>Neural Networks &amp; Deep Learning</span>
+              </div>
+              <div class="course-item">
+                <span class="course-dot pink"></span>
+                <span>Computer Vision</span>
+              </div>
+              <div class="course-item">
+                <span class="course-dot cyan"></span>
+                <span>Database Management Systems</span>
+              </div>
+              <div class="course-item">
+                <span class="course-dot orange"></span>
+                <span>Operating Systems</span>
+              </div>
+              <div class="course-item">
+                <span class="course-dot purple"></span>
+                <span>Object Oriented Programming (Java)</span>
+              </div>
+              <div class="course-item">
+                <span class="course-dot blue"></span>
+                <span>Probability &amp; Statistics for ML</span>
+              </div>
+              <div class="course-item">
+                <span class="course-dot green"></span>
+                <span>Natural Language Processing</span>
+              </div>
+              <div class="course-item">
+                <span class="course-dot yellow"></span>
+                <span>Android Application Development</span>
+              </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="edu-section-title"><span class="comment">// </span>Certifications &amp; Achievements</div>
+            <div class="cert-list">
+              <div class="cert-item">
+                <span class="cert-icon">🏅</span>
+                <div class="cert-body">
+                  <span class="cert-name">Machine Learning — Hands On</span>
+                  <span class="cert-org">Self-paced / Online</span>
+                </div>
+              </div>
+              <div class="cert-item">
+                <span class="cert-icon">🏅</span>
+                <div class="cert-body">
+                  <span class="cert-name">Computer Vision with YOLOv8 &amp; OpenCV</span>
+                  <span class="cert-org">Project-based Learning</span>
+                </div>
+              </div>
+              <div class="cert-item">
+                <span class="cert-icon">⭐</span>
+                <div class="cert-body">
+                  <span class="cert-name">GitHub — 7 Public Repositories</span>
+                  <span class="cert-org">Open Source Contributor</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- PROJECTS PAGE -->
+        <div class="page" id="page-projects">
+          <div class="watermark">Projects</div>
+          <div class="page-content">
+            <h2 class="page-title"><span class="comment"># </span>Projects</h2>
+            <div class="projects-grid">
+
+              <div class="project-card">
+                <div class="project-header">
+                  <span class="project-icon">🤖</span>
+                  <a href="https://github.com/HarshuPandhare/SpamDetection_Using_MachineLearning" target="_blank" class="project-link">SpamDetection_ML</a>
+                </div>
+                <p class="project-desc">ML-powered spam classifier using Naïve Bayes, Scikit-learn and NLP preprocessing on real datasets.</p>
+                <div class="project-tags">
+                  <span class="ptag">Python</span><span class="ptag">ML</span><span class="ptag">NLP</span>
+                </div>
+                <div class="project-stars">⭐ 2</div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-header">
+                  <span class="project-icon">🧠</span>
+                  <a href="https://github.com/HarshuPandhare/Agentic-AI" target="_blank" class="project-link">Agentic-AI</a>
+                </div>
+                <p class="project-desc">Autonomous AI agent workflows that can plan, act, and reflect using LLM-based pipelines.</p>
+                <div class="project-tags">
+                  <span class="ptag">Python</span><span class="ptag">LLM</span><span class="ptag">Agents</span>
+                </div>
+                <div class="project-stars">⭐ 1</div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-header">
+                  <span class="project-icon">👁️</span>
+                  <a href="https://github.com/HarshuPandhare/yolov8-opencv-computer-vision-system" target="_blank" class="project-link">YOLOv8 CV System</a>
+                </div>
+                <p class="project-desc">Real-time object detection security system using YOLOv8 and OpenCV for threat identification.</p>
+                <div class="project-tags">
+                  <span class="ptag">YOLOv8</span><span class="ptag">OpenCV</span><span class="ptag">HTML</span>
+                </div>
+                <div class="project-stars">⭐ 1</div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-header">
+                  <span class="project-icon">🔒</span>
+                  <a href="https://github.com/HarshuPandhare/Computer-Vision-Security-System" target="_blank" class="project-link">CV Security System</a>
+                </div>
+                <p class="project-desc">Advanced computer vision-based security monitoring system with alert mechanisms.</p>
+                <div class="project-tags">
+                  <span class="ptag">Python</span><span class="ptag">OpenCV</span><span class="ptag">CV</span>
+                </div>
+                <div class="project-stars">⭐ 0</div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-header">
+                  <span class="project-icon">🐕</span>
+                  <a href="https://github.com/HarshuPandhare/DogSafetyDevice" target="_blank" class="project-link">DogSafetyDevice</a>
+                </div>
+                <p class="project-desc">IoT device that alerts pet owners via SMS & real-time GPS location when their dog is in danger.</p>
+                <div class="project-tags">
+                  <span class="ptag">C++</span><span class="ptag">IoT</span><span class="ptag">GPS</span>
+                </div>
+                <div class="project-stars">⭐ 0</div>
+              </div>
+
+              <div class="project-card">
+                <div class="project-header">
+                  <span class="project-icon">📊</span>
+                  <a href="https://github.com/HarshuPandhare/ProductivityTracker_Using_C" target="_blank" class="project-link">ProductivityTracker</a>
+                </div>
+                <p class="project-desc">File-handling based productivity tracker that stores student data and visualizes improvement over time.</p>
+                <div class="project-tags">
+                  <span class="ptag">C</span><span class="ptag">File I/O</span>
+                </div>
+                <div class="project-stars">⭐ 0</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTACT PAGE -->
+        <div class="page" id="page-contact">
+          <div class="watermark">Contact</div>
+          <div class="page-content contact-page">
+            <h2 class="page-title"><span class="comment">// </span>Contact</h2>
+            <div class="contact-block">
+              <div class="contact-line">
+                <span class="key">name:</span>
+                <span class="val">"Harshvardhan Pandhare"</span>
+              </div>
+              <div class="contact-line">
+                <span class="key">github:</span>
+                <a class="val link" href="https://github.com/HarshuPandhare" target="_blank">"github.com/HarshuPandhare"</a>
+              </div>
+              <div class="contact-line">
+                <span class="key">linkedin:</span>
+                <a class="val link" href="https://www.linkedin.com/in/harshvardhan-pandhare-304305361/" target="_blank">"linkedin.com/in/harshvardhan-pandhare"</a>
+              </div>
+              <div class="contact-line">
+                <span class="key">location:</span>
+                <span class="val">"Pune, Maharashtra, India"</span>
+              </div>
+              <div class="contact-line">
+                <span class="key">status:</span>
+                <span class="val green-val">"Open to Opportunities"</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Status Bar -->
+  <div class="statusbar">
+    <div class="status-left">
+      <span class="status-item">⎇ main</span>
+      <span class="status-item">⚠ 0</span>
+      <span class="status-item">⊘ 0</span>
+    </div>
+    <div class="status-right">
+      <a href="https://www.linkedin.com/in/harshvardhan-pandhare-304305361/" target="_blank" class="status-item link-item">in LinkedIn</a>
+      <a href="https://github.com/HarshuPandhare" target="_blank" class="status-item link-item">⎇ Github</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
